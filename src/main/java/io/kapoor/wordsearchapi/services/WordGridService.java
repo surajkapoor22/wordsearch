@@ -29,7 +29,6 @@ public class WordGridService {
                 this.y = y;
             }
         }
-
         public char[][] generateGrid(int gridSize, List<String> words) {
             List<Coordinate> coordinates = new ArrayList<>();
 
@@ -90,7 +89,6 @@ public class WordGridService {
             randomFillGrid(contents);
             return contents;
         }
-
         private void randomFillGrid(char[][] contents){
             int gridSize=contents[0].length;
             String allCapLetters="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -101,7 +99,6 @@ public class WordGridService {
                         contents[i][j]=allCapLetters.charAt(randomIndex);
                     }
                 }
-
             }
         }
 
@@ -127,7 +124,7 @@ public class WordGridService {
                     }
                     break;
 
-                case VERTICAL:
+                 case VERTICAL:
                     if (coordinate.x + word.length() > gridSize)
                         return false;
                     for (int i = 0; i < word.length(); i++) {
